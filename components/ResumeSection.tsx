@@ -112,8 +112,8 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
               <div>
-                <strong className="text-slate-200 print:text-black font-semibold">Languages & Backend:</strong>{' '}
-                Python, Java, C++, TypeScript, JavaScript, Node.js, Nest.js, REST APIs
+                <strong className="text-slate-200 print:text-black font-semibold">Languages, Frontend & Backend:</strong>{' '}
+                Python, Java, C++, React, Next.js, TypeScript, JavaScript, Node.js, Nest.js, REST APIs
               </div>
               <div>
                 <strong className="text-slate-200 print:text-black font-semibold">Data & Databases:</strong>{' '}
@@ -125,7 +125,7 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
               </div>
               <div>
                 <strong className="text-slate-200 print:text-black font-semibold">Tools & Infrastructure:</strong>{' '}
-                Git, GitHub, Linux, System Architecture
+                Docker Containerization, Git, GitHub, Linux, System Architecture
               </div>
             </div>
           </div>

@@ -116,10 +116,10 @@ export const PERSONAL_INFO = {
   ],
   techStack: {
     backend: ['Python', 'Java', 'C++', 'Node.js', 'REST APIs', 'Scalable Backend Services'],
-    frontend: ['TypeScript', 'JavaScript', 'Next.js', 'Nest.js'],
+    frontend: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Nest.js'],
     data: ['PostgreSQL / Relational Databases', 'Vector DB (Vector Databases)', 'PostGIS', 'Database Design & Schema Optimization'],
     ai: ['Machine Learning Basics', 'LangChain Framework', 'LLM Evaluation & Alignment', 'Prompt Engineering', 'AI Data Pipelines'],
-    engineering: ['Git', 'GitHub', 'Linux Environment', 'System Architecture'],
+    engineering: ['Docker Containerization', 'Git', 'GitHub', 'Linux Environment', 'System Architecture'],
     geospatial: ['QGIS', 'PostGIS Spatial Analytics'],
   },
 };
