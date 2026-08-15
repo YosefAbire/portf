@@ -79,12 +79,13 @@ export const PERSONAL_INFO = {
   name: 'Yosef Abire',
   eyebrow: 'INFORMATION SYSTEMS • TECHNOLOGY • AI',
   heroHeadline: 'Building technology systems that connect business, people, data, and decisions.',
-  positioningTitle: 'Information Systems Professional & Technology Builder',
+  positioningTitle:
+    'Information Systems Professional, Backend Engineer, AI & IS Researcher and Evaluator, and Full-Stack Developer',
   heroSupportingText:
-    'Information Systems professional and backend-heavy engineer focused on digital marketplaces, enterprise systems, AI-powered platforms, and data-intensive solutions.',
+    'Information Systems professional, backend engineer, AI & IS researcher/evaluator, and full-stack developer focused on digital marketplaces, enterprise systems, AI platforms, vector databases, and data-intensive solutions.',
   location: 'Arba Minch, South Ethiopia Region, Ethiopia',
   phones: ['+251 984 909 329', '+251 957 425 458'],
-  email: 'yosefabire@gmail.com', // standard format
+  email: 'jossyyasub@gmail.com',
   github: 'https://github.com/YosefAbire',
   linkedin: 'https://linkedin.com/in/yosefabire',
   education: {
@@ -114,10 +115,10 @@ export const PERSONAL_INFO = {
     'Team Collaboration',
   ],
   techStack: {
-    backend: ['Python', 'Node.js', 'REST APIs', 'Scalable Backend Services'],
+    backend: ['Python', 'Java', 'C++', 'Node.js', 'REST APIs', 'Scalable Backend Services'],
     frontend: ['TypeScript', 'JavaScript', 'Next.js', 'Nest.js'],
-    data: ['PostgreSQL / Relational Databases', 'PostGIS', 'Database Design & Schema Optimization'],
-    ai: ['Machine Learning Basics', 'LLM Evaluation & Alignment', 'Prompt Engineering', 'AI Data Pipelines'],
+    data: ['PostgreSQL / Relational Databases', 'Vector DB (Vector Databases)', 'PostGIS', 'Database Design & Schema Optimization'],
+    ai: ['Machine Learning Basics', 'LangChain Framework', 'LLM Evaluation & Alignment', 'Prompt Engineering', 'AI Data Pipelines'],
     engineering: ['Git', 'GitHub', 'Linux Environment', 'System Architecture'],
     geospatial: ['QGIS', 'PostGIS Spatial Analytics'],
   },
@@ -359,7 +360,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { name: 'Marketplace APIs', desc: 'REST endpoints connecting inventory data sources', iconName: 'Database' },
       { name: 'Product Decisions', desc: 'Structured recommendation output & comparative view', iconName: 'CheckSquare' },
     ],
-    techStack: ['Python', 'Machine Learning Basics', 'REST APIs', 'TypeScript', 'Data Pipelines', 'System Architecture'],
+    techStack: ['Python', 'LangChain', 'Vector DB', 'Machine Learning Basics', 'REST APIs', 'TypeScript', 'Data Pipelines', 'System Architecture'],
     keyDecisions: [
       'Separated the AI reasoning component from the core catalog service to ensure system decoupling.',
       'Used structured JSON outputs from AI inference routines to populate UI comparison cards directly.',
@@ -382,8 +383,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     aiPerspective: {
       title: 'AI System Perspective — Decision Support Architecture',
       points: [
-        { label: 'AI Integration', detail: 'Embedded machine learning logic into standard REST web services without disrupting core catalog throughput.' },
-        { label: 'Data Processing Pipelines', detail: 'Built ETL routines cleaning raw product descriptions into normalized feature vectors.' },
+        { label: 'AI Integration', detail: 'Embedded machine learning and LangChain orchestration into standard REST web services without disrupting core catalog throughput.' },
+        { label: 'Data Processing Pipelines', detail: 'Built ETL routines cleaning raw product descriptions into normalized feature vectors and Vector DB embeddings.' },
         { label: 'User Interaction Design', detail: 'Created conversational interfaces that present complex comparative specs cleanly.' },
         { label: 'Decision Support', detail: 'Focused on assisting human decision-making rather than black-box automated purchasing.' },
         { label: 'System Integration', detail: 'Connected disparate data sources via standardized API contracts.' },
@@ -422,7 +423,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { name: 'Error Analysis', desc: 'Hallucination, bias & inconsistency classification', iconName: 'AlertTriangle' },
       { name: 'HITL Feedback Loop', desc: 'Human refinement pipeline driving model improvement', iconName: 'RefreshCw' },
     ],
-    techStack: ['LLM Evaluation', 'Prompt Design', 'Dataset Curation', 'Error Analysis', 'Hallucination Detection', 'Python', 'Data Quality'],
+    techStack: ['LLM Evaluation', 'LangChain', 'Prompt Design', 'Dataset Curation', 'Error Analysis', 'Hallucination Detection', 'Python', 'Data Quality'],
     keyDecisions: [
       'Created standardized error taxonomies categorizing failures into factual, logical, and formatting errors.',
       'Designed multi-step reasoning prompts requiring explicit intermediate steps to isolate logical breaks.',

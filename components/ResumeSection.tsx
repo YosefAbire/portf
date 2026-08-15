@@ -113,15 +113,15 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
               <div>
                 <strong className="text-slate-200 print:text-black font-semibold">Languages & Backend:</strong>{' '}
-                Python, TypeScript, JavaScript, Node.js, Nest.js, REST APIs
+                Python, Java, C++, TypeScript, JavaScript, Node.js, Nest.js, REST APIs
               </div>
               <div>
-                <strong className="text-slate-200 print:text-black font-semibold">Data & Geospatial:</strong>{' '}
-                PostgreSQL, Relational DB Design, PostGIS, QGIS
+                <strong className="text-slate-200 print:text-black font-semibold">Data & Databases:</strong>{' '}
+                PostgreSQL, Relational DB Design, Vector DB (Vector Databases), PostGIS, QGIS
               </div>
               <div>
                 <strong className="text-slate-200 print:text-black font-semibold">AI & Machine Learning:</strong>{' '}
-                Machine Learning Basics, LLM Output Evaluation, Prompt Curation, Dataset Design
+                Machine Learning Basics, LangChain Framework, LLM Output Evaluation, Prompt Curation, Dataset Design
               </div>
               <div>
                 <strong className="text-slate-200 print:text-black font-semibold">Tools & Infrastructure:</strong>{' '}
