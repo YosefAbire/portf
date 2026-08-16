@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-export type ThemeMode = 'ocean' | 'emerald' | 'indigo' | 'amber' | 'light';
+export type ThemeMode = 'ocean' | 'emerald' | 'indigo' | 'amber';
 
 export interface ThemeOption {
   id: ThemeMode;
@@ -41,13 +41,6 @@ export const THEMES: ThemeOption[] = [
     bgPreview: '#180D08',
     gradient: 'from-amber-400 to-orange-500',
   },
-  {
-    id: 'light',
-    name: 'Clean Light',
-    color: '#0284C7',
-    bgPreview: '#F8FAFC',
-    gradient: 'from-sky-600 to-blue-700',
-  },
 ];
 
 interface ThemeContextType {
@@ -70,14 +63,9 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     if (savedTheme && THEMES.some((t) => t.id === savedTheme)) {
       setThemeState(savedTheme);
       document.documentElement.setAttribute('data-theme', savedTheme);
-      if (savedTheme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
     } else {
+      setThemeState('ocean');
       document.documentElement.setAttribute('data-theme', 'ocean');
-      document.documentElement.classList.add('dark');
     }
   }, []);
 
@@ -85,11 +73,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setThemeState(newTheme);
     localStorage.setItem('yosef_portfolio_theme', newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
-    if (newTheme === 'light') {
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-    }
   };
 
   return (
