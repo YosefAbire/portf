@@ -79,13 +79,13 @@ export const ExperienceTimeline: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-mono font-bold bg-sky-500/15 text-sky-400 border border-sky-500/30">
             VERIFIED EXPERIENCE
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-100 tracking-tight">
             Professional Experience & <span className="gradient-text-sky">Education</span>
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-normal">
             Strictly documented trajectory grounded in facts from Yosef Abire's academic background and technical contract history.
           </p>
         </div>
@@ -98,30 +98,30 @@ export const ExperienceTimeline: React.FC = () => {
               <div key={idx} className="relative pl-6 sm:pl-10 group">
                 {/* Timeline Dot */}
                 <div
-                  className={`absolute -left-[17px] top-1.5 w-8 h-8 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center text-white shadow-md border-2 border-[#0A0E17] group-hover:scale-110 transition-transform`}
+                  className={`absolute -left-[20px] top-2 w-9 h-9 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center text-white shadow-md border-2 border-[#0A0E17] group-hover:scale-110 transition-transform`}
                 >
-                  <IconComp className="w-4 h-4" />
+                  <IconComp className="w-4.5 h-4.5" />
                 </div>
 
                 {/* Card Container */}
-                <div className="glass-panel p-6 rounded-2xl border border-slate-800/80 hover:border-sky-500/40 transition-all duration-300 space-y-3">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
+                <div className="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-sky-500/50 transition-all duration-300 space-y-3.5 shadow-xl">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3.5">
                     <div>
-                      <span className="text-[10px] font-mono uppercase font-bold text-sky-400">
+                      <span className="text-xs font-mono uppercase font-extrabold text-sky-400">
                         {item.type}
                       </span>
-                      <h3 className="text-lg font-bold text-slate-100">{item.title}</h3>
-                      <div className="text-xs text-slate-300 font-medium">{item.organization}</div>
+                      <h3 className="text-xl font-bold text-slate-100 mt-0.5">{item.title}</h3>
+                      <div className="text-sm text-slate-200 font-semibold mt-0.5">{item.organization}</div>
                     </div>
-                    <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-slate-900 text-slate-300 border border-slate-800 shrink-0 self-start sm:self-auto">
+                    <span className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-mono font-bold bg-slate-900 text-slate-200 border border-slate-700 shrink-0 self-start sm:self-auto shadow-sm">
                       {item.period}
                     </span>
                   </div>
 
-                  <ul className="space-y-2 pt-1">
+                  <ul className="space-y-2.5 pt-1">
                     {item.highlights.map((h, hIdx) => (
-                      <li key={hIdx} className="text-xs text-slate-300 flex items-start gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-sky-400 mt-0.5 shrink-0" />
+                      <li key={hIdx} className="text-sm sm:text-base text-slate-200 flex items-start gap-2.5 font-normal">
+                        <CheckCircle2 className="w-4.5 h-4.5 text-sky-400 mt-0.5 shrink-0" />
                         <span>{h}</span>
                       </li>
                     ))}

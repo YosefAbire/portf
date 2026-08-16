@@ -109,71 +109,71 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResumeModal }) =
           <div className="lg:col-span-6 space-y-6 text-left">
             {/* Eyebrow & Status */}
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/25 tracking-wider uppercase">
-                <Sparkles className="w-3.5 h-3.5 text-sky-400" />
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-mono font-bold bg-sky-500/15 text-sky-400 border border-sky-500/30 tracking-wider uppercase">
+                <Sparkles className="w-4 h-4 text-sky-400" />
                 {PERSONAL_INFO.eyebrow}
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
                 Open for Systems & Tech Roles
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-100 tracking-tight leading-[1.15]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-100 tracking-tight leading-[1.15]">
               Building technology systems that connect{' '}
               <span className="gradient-text-sky">business, people, data,</span> and{' '}
               <span className="gradient-text-emerald">decisions.</span>
             </h1>
 
             {/* Position Badge & Subtitle */}
-            <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-sm space-y-2">
-              <div className="text-xs font-mono font-bold text-sky-400 uppercase tracking-wide">
+            <div className="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 backdrop-blur-sm space-y-2.5 shadow-lg">
+              <div className="text-xs sm:text-sm font-mono font-bold text-sky-400 uppercase tracking-wider">
                 Professional Positioning
               </div>
-              <div className="text-base font-bold text-slate-100">
+              <div className="text-lg sm:text-xl font-bold text-slate-100">
                 {PERSONAL_INFO.positioningTitle}
               </div>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p className="text-base text-slate-200 leading-relaxed font-normal">
                 {PERSONAL_INFO.heroSupportingText}
               </p>
             </div>
 
             {/* Core Capability Checklist */}
-            <div className="grid grid-cols-2 gap-2 text-xs font-medium text-slate-300">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm sm:text-base font-semibold text-slate-200">
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
                 <span>Information Systems Architecture</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
                 <span>Backend API & DB Engineering</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
                 <span>AI Agent & LLM Evaluation</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+              <div className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
                 <span>Stakeholder Requirement Bridge</span>
               </div>
             </div>
 
             {/* CTA Action Buttons */}
-            <div className="pt-2 flex flex-wrap items-center gap-4">
+            <div className="pt-3 flex flex-wrap items-center gap-4">
               <a
                 href="#case-studies"
-                className="px-6 py-3.5 rounded-xl text-sm font-bold bg-gradient-to-r from-sky-500 via-sky-600 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white shadow-lg shadow-sky-500/25 transition-all hover:scale-[1.02] flex items-center gap-2 group"
+                className="px-6 py-3.5 rounded-xl text-base font-bold bg-gradient-to-r from-sky-500 via-sky-600 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white shadow-lg shadow-sky-500/25 transition-all hover:scale-[1.02] flex items-center gap-2 group"
               >
                 <span>Explore My Work</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
 
               <button
                 onClick={onOpenResumeModal}
-                className="px-6 py-3.5 rounded-xl text-sm font-bold bg-slate-900 hover:bg-slate-800 text-sky-400 border border-sky-500/40 hover:border-sky-400 transition-all flex items-center gap-2 shadow-sm"
+                className="px-6 py-3.5 rounded-xl text-base font-bold bg-slate-900 hover:bg-slate-800 text-sky-400 border border-sky-500/40 hover:border-sky-400 transition-all flex items-center gap-2 shadow-sm"
               >
-                <FileText className="w-4 h-4 text-sky-400" />
+                <FileText className="w-5 h-5 text-sky-400" />
                 <span>View Resume</span>
               </button>
             </div>
@@ -181,23 +181,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResumeModal }) =
 
           {/* Right Side: Sophisticated Systems Architecture Flow Visualizer */}
           <div className="lg:col-span-6 relative">
-            <div className="glass-panel-glow p-6 rounded-3xl relative overflow-hidden">
+            <div className="glass-panel-glow p-6 rounded-3xl relative overflow-hidden shadow-2xl">
               <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-500" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                  <span className="ml-2 text-xs font-mono text-slate-400 font-semibold">
+                  <div className="w-3.5 h-3.5 rounded-full bg-rose-500" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-amber-500" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-emerald-500" />
+                  <span className="ml-2 text-xs sm:text-sm font-mono text-slate-300 font-bold">
                     SYSTEMS_THINKING_ARCHITECTURE.sys
                   </span>
                 </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20 flex items-center gap-1">
-                  <Activity className="w-3 h-3 animate-pulse" /> Live Dynamic Pipeline
+                <span className="text-xs font-mono px-2.5 py-1 rounded bg-sky-500/15 text-sky-400 border border-sky-500/30 flex items-center gap-1.5 font-bold">
+                  <Activity className="w-3.5 h-3.5 animate-pulse" /> Dynamic Pipeline
                 </span>
               </div>
 
               {/* Node Flow Visualizer */}
-              <div className="space-y-2.5 relative">
+              <div className="space-y-3 relative">
                 {systemsFlow.map((node, index) => {
                   const IconComponent = node.icon;
                   const isSelected = selectedNode === index;
@@ -205,10 +205,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResumeModal }) =
                     <div
                       key={node.step}
                       onClick={() => setSelectedNode(index)}
-                      className={`group cursor-pointer transition-all duration-200 p-3 rounded-xl border relative ${
+                      className={`group cursor-pointer transition-all duration-200 p-3.5 rounded-xl border relative ${
                         isSelected
-                          ? 'bg-slate-800/90 border-sky-500/60 shadow-md shadow-sky-500/10 scale-[1.01]'
-                          : 'bg-slate-900/60 border-slate-800/80 hover:bg-slate-800/50 hover:border-slate-700'
+                          ? 'bg-slate-800/90 border-sky-500/80 shadow-md shadow-sky-500/20 scale-[1.01]'
+                          : 'bg-slate-900/80 border-slate-800 hover:bg-slate-800/60 hover:border-slate-700'
                       }`}
                     >
                       {/* Connection Line */}
@@ -219,22 +219,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResumeModal }) =
                       <div className="flex items-center justify-between relative z-10">
                         <div className="flex items-center gap-3">
                           <div
-                            className={`w-8 h-8 rounded-lg bg-gradient-to-br ${node.color} flex items-center justify-center text-white shadow-sm shrink-0 font-bold text-xs`}
+                            className={`w-9 h-9 rounded-lg bg-gradient-to-br ${node.color} flex items-center justify-center text-white shadow-sm shrink-0 font-bold text-sm`}
                           >
-                            <IconComponent className="w-4 h-4" />
+                            <IconComponent className="w-4.5 h-4.5" />
                           </div>
                           <div>
                             <div className="flex items-center gap-2">
-                              <span className="text-[10px] font-mono text-sky-400 font-bold">
+                              <span className="text-xs font-mono text-sky-400 font-extrabold">
                                 {node.step}
                               </span>
-                              <h4 className="text-xs font-bold text-slate-100">{node.title}</h4>
+                              <h4 className="text-sm sm:text-base font-bold text-slate-100">{node.title}</h4>
                             </div>
-                            <p className="text-[11px] text-slate-400 line-clamp-1">{node.desc}</p>
+                            <p className="text-xs sm:text-sm text-slate-300 line-clamp-1 font-medium">{node.desc}</p>
                           </div>
                         </div>
 
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800 group-hover:border-sky-500/30">
+                        <span className="text-xs font-mono px-2.5 py-1 rounded bg-slate-950 text-slate-200 border border-slate-700 group-hover:border-sky-500/40 font-semibold hidden sm:inline-block">
                           {node.badge}
                         </span>
                       </div>
@@ -244,15 +244,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenResumeModal }) =
               </div>
 
               {/* Selected Node Details Drawer */}
-              <div className="mt-4 p-3.5 rounded-xl bg-slate-950/90 border border-sky-500/30 transition-all">
-                <div className="flex items-center justify-between text-xs font-bold text-sky-400 mb-1">
+              <div className="mt-4 p-4 rounded-xl bg-slate-950/95 border border-sky-500/40 transition-all">
+                <div className="flex items-center justify-between text-sm font-bold text-sky-400 mb-1.5">
                   <span className="flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5" />
+                    <Sparkles className="w-4 h-4" />
                     Layer {systemsFlow[selectedNode].step}: {systemsFlow[selectedNode].title} Deep-Dive
                   </span>
-                  <span className="text-[10px] font-mono text-slate-500">Click any stage above</span>
+                  <span className="text-xs font-mono text-slate-400">Click any stage above</span>
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-medium">
                   {systemsFlow[selectedNode].details}
                 </p>
               </div>

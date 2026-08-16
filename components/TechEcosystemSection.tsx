@@ -51,17 +51,17 @@ export const TechEcosystemSection: React.FC = () => {
   ];
 
   return (
-    <section id="tech-stack" className="py-24 relative bg-slate-950/80 border-y border-slate-800">
+    <section id="tech-stack" className="py-24 relative border-y border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-mono font-bold bg-sky-500/15 text-sky-400 border border-sky-500/30">
             TECHNICAL CREDIBILITY
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-100 tracking-tight">
             Technology Ecosystem & <span className="gradient-text-sky">Architectural Stack</span>
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-normal">
             A balanced technical stack focused on system architecture, database design, backend services, and AI evaluation frameworks.
           </p>
         </div>
@@ -73,30 +73,30 @@ export const TechEcosystemSection: React.FC = () => {
             return (
               <div
                 key={cat.title}
-                className={`glass-panel p-6 rounded-2xl border ${cat.borderColor} hover:border-sky-500/50 transition-all duration-300 space-y-4 group`}
+                className={`glass-panel p-6 rounded-2xl border ${cat.borderColor} hover:border-sky-500/60 transition-all duration-300 space-y-4 group shadow-xl`}
               >
                 <div className="flex items-center gap-3">
                   <div
-                    className={`w-10 h-10 rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-white shadow-md`}
+                    className={`w-11 h-11 rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-white shadow-md`}
                   >
-                    <IconComp className="w-5 h-5" />
+                    <IconComp className="w-5.5 h-5.5" />
                   </div>
-                  <h3 className="text-base font-bold text-slate-100 group-hover:text-sky-300 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-100 group-hover:text-sky-300 transition-colors">
                     {cat.title}
                   </h3>
                 </div>
 
-                <ul className="space-y-2 pt-2 border-t border-slate-800/80">
+                <ul className="space-y-2.5 pt-3 border-t border-slate-800">
                   {cat.skills.map((skill) => (
                     <li
                       key={skill}
-                      className="text-xs text-slate-300 flex items-center justify-between p-2 rounded-lg bg-slate-900/60 border border-slate-800/60"
+                      className="text-sm font-semibold text-slate-200 flex items-center justify-between p-2.5 rounded-xl bg-slate-900/80 border border-slate-700"
                     >
-                      <span className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
+                      <span className="flex items-center gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
                         <span>{skill}</span>
                       </span>
-                      <span className="text-[10px] font-mono text-slate-500 uppercase">
+                      <span className="text-xs font-mono text-emerald-400 font-bold uppercase">
                         Verified
                       </span>
                     </li>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { ThemeProvider } from '@/lib/ThemeContext';
 
 export const metadata: Metadata = {
   title: 'Yosef Abire — Information Systems & Technology Professional',
@@ -40,10 +41,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className="bg-[#0A0E17] text-slate-100 antialiased min-h-screen selection:bg-sky-500 selection:text-white font-sans">
-        {children}
+    <html lang="en" className="dark scroll-smooth" data-theme="ocean">
+      <body className="antialiased min-h-screen selection:bg-sky-500 selection:text-white font-sans text-base transition-colors duration-300">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
 }
+

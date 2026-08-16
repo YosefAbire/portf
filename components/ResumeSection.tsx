@@ -51,28 +51,28 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
           {/* Header Block */}
           <div className="border-b border-slate-800 print:border-gray-300 pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-extrabold text-white print:text-black tracking-tight">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-white print:text-black tracking-tight">
                 YOSEF ABIRE
               </h1>
-              <div className="text-sm font-semibold text-sky-400 print:text-sky-700 mt-1">
+              <div className="text-base font-bold text-sky-400 print:text-sky-700 mt-1">
                 {PERSONAL_INFO.positioningTitle}
               </div>
-              <p className="text-xs text-slate-400 print:text-gray-600 max-w-xl mt-2 leading-relaxed">
+              <p className="text-sm text-slate-300 print:text-gray-600 max-w-xl mt-2 leading-relaxed font-normal">
                 Backend-heavy Full-Stack Engineer and Information Systems professional focused on digital marketplaces, enterprise HR systems, AI-driven platforms, and data-intensive solutions.
               </p>
             </div>
 
-            <div className="text-xs text-slate-300 print:text-gray-700 space-y-1 font-mono shrink-0">
-              <div className="flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5 text-sky-400 print:text-black" />
+            <div className="text-xs sm:text-sm text-slate-200 print:text-gray-700 space-y-1.5 font-mono shrink-0 font-medium">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-sky-400 print:text-black" />
                 <span>+251 984 909 329 / +251 957 425 458</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <Mail className="w-3.5 h-3.5 text-sky-400 print:text-black" />
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-sky-400 print:text-black" />
                 <span>{PERSONAL_INFO.email}</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-sky-400 print:text-black" />
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-sky-400 print:text-black" />
                 <span>{PERSONAL_INFO.location}</span>
               </div>
             </div>
@@ -80,26 +80,26 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
 
           {/* Section: Core Competencies */}
           <div className="space-y-3">
-            <h3 className="text-xs font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
+            <h3 className="text-xs sm:text-sm font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
               Core Competencies
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
-              <div className="p-2 rounded bg-slate-900 print:bg-gray-100 border border-slate-800 print:border-gray-300">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs sm:text-sm font-medium">
+              <div className="p-2.5 rounded-lg bg-slate-900 print:bg-gray-100 border border-slate-700 print:border-gray-300 text-slate-200">
                 Information Systems Architecture
               </div>
-              <div className="p-2 rounded bg-slate-900 print:bg-gray-100 border border-slate-800 print:border-gray-300">
+              <div className="p-2.5 rounded-lg bg-slate-900 print:bg-gray-100 border border-slate-700 print:border-gray-300 text-slate-200">
                 Relational Database Design (3NF)
               </div>
-              <div className="p-2 rounded bg-slate-900 print:bg-gray-100 border border-slate-800 print:border-gray-300">
+              <div className="p-2.5 rounded-lg bg-slate-900 print:bg-gray-100 border border-slate-700 print:border-gray-300 text-slate-200">
                 RESTful API Microservices
               </div>
-              <div className="p-2 rounded bg-slate-900 print:bg-gray-100 border border-slate-800 print:border-gray-300">
+              <div className="p-2.5 rounded-lg bg-slate-900 print:bg-gray-100 border border-slate-700 print:border-gray-300 text-slate-200">
                 LLM Training & Evaluation
               </div>
-              <div className="p-2 rounded bg-slate-900 print:bg-gray-100 border border-slate-800 print:border-gray-300">
+              <div className="p-2.5 rounded-lg bg-slate-900 print:bg-gray-100 border border-slate-700 print:border-gray-300 text-slate-200">
                 Stakeholder Requirements Eng.
               </div>
-              <div className="p-2 rounded bg-slate-900 print:bg-gray-100 border border-slate-800 print:border-gray-300">
+              <div className="p-2.5 rounded-lg bg-slate-900 print:bg-gray-100 border border-slate-700 print:border-gray-300 text-slate-200">
                 Data Pipeline Engineering
               </div>
             </div>
@@ -107,24 +107,24 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
 
           {/* Section: Technical Skills */}
           <div className="space-y-3">
-            <h3 className="text-xs font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
+            <h3 className="text-xs sm:text-sm font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
               Technical Skills
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-              <div>
-                <strong className="text-slate-200 print:text-black font-semibold">Languages, Frontend & Backend:</strong>{' '}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+              <div className="text-slate-200 leading-relaxed font-normal">
+                <strong className="text-white print:text-black font-bold block mb-0.5">Languages, Frontend & Backend:</strong>{' '}
                 Python, Java, C++, React, Next.js, TypeScript, JavaScript, Node.js, Nest.js, REST APIs
               </div>
-              <div>
-                <strong className="text-slate-200 print:text-black font-semibold">Data & Databases:</strong>{' '}
+              <div className="text-slate-200 leading-relaxed font-normal">
+                <strong className="text-white print:text-black font-bold block mb-0.5">Data & Databases:</strong>{' '}
                 PostgreSQL, Relational DB Design, Vector DB (Vector Databases), PostGIS, QGIS
               </div>
-              <div>
-                <strong className="text-slate-200 print:text-black font-semibold">AI & Machine Learning:</strong>{' '}
+              <div className="text-slate-200 leading-relaxed font-normal">
+                <strong className="text-white print:text-black font-bold block mb-0.5">AI & Machine Learning:</strong>{' '}
                 Machine Learning Basics, LangChain Framework, LLM Output Evaluation, Prompt Curation, Dataset Design
               </div>
-              <div>
-                <strong className="text-slate-200 print:text-black font-semibold">Tools & Infrastructure:</strong>{' '}
+              <div className="text-slate-200 leading-relaxed font-normal">
+                <strong className="text-white print:text-black font-bold block mb-0.5">Tools & Infrastructure:</strong>{' '}
                 Docker Containerization, Git, GitHub, Linux, System Architecture
               </div>
             </div>
@@ -132,17 +132,17 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
 
           {/* Section: Experience */}
           <div className="space-y-4">
-            <h3 className="text-xs font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
+            <h3 className="text-xs sm:text-sm font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
               Professional Experience
             </h3>
 
-            <div className="space-y-3 text-xs">
+            <div className="space-y-4 text-xs sm:text-sm">
               <div>
-                <div className="flex justify-between font-bold text-slate-100 print:text-black">
+                <div className="flex justify-between font-bold text-slate-100 text-sm sm:text-base print:text-black">
                   <span>AI Data Specialist (LLM Training & Evaluation) — Remote Contract Role (Revelo)</span>
-                  <span className="font-mono text-slate-400 print:text-gray-600">2026 (6 Months)</span>
+                  <span className="font-mono text-sky-400 print:text-gray-600 font-bold">2026 (6 Months)</span>
                 </div>
-                <ul className="list-disc list-inside text-slate-300 print:text-gray-700 mt-1 space-y-1">
+                <ul className="list-disc list-inside text-slate-200 print:text-gray-700 mt-1.5 space-y-1 font-normal">
                   <li>Evaluated and refined Large Language Model outputs for reasoning and instruction alignment.</li>
                   <li>Designed instruction datasets and prompt benchmarks for fine-tuning.</li>
                   <li>Conducted error analysis to detect hallucinations, bias, and inconsistency.</li>
@@ -150,11 +150,11 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
               </div>
 
               <div>
-                <div className="flex justify-between font-bold text-slate-100 print:text-black">
+                <div className="flex justify-between font-bold text-slate-100 text-sm sm:text-base print:text-black">
                   <span>HR Management System Intern — Gamo Development Association</span>
-                  <span className="font-mono text-slate-400 print:text-gray-600">2025–2026</span>
+                  <span className="font-mono text-sky-400 print:text-gray-600 font-bold">2025–2026</span>
                 </div>
-                <ul className="list-disc list-inside text-slate-300 print:text-gray-700 mt-1 space-y-1">
+                <ul className="list-disc list-inside text-slate-200 print:text-gray-700 mt-1.5 space-y-1 font-normal">
                   <li>Gathered requirements from non-technical stakeholders to digitize HR operations.</li>
                   <li>Built backend services for employee profiles, attendance tracking, and automated reporting.</li>
                   <li>Designed normalized relational database schemas.</li>
@@ -165,35 +165,35 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
 
           {/* Section: Projects */}
           <div className="space-y-3">
-            <h3 className="text-xs font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
+            <h3 className="text-xs sm:text-sm font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
               Key Projects
             </h3>
-            <div className="space-y-2 text-xs">
-              <div>
-                <strong className="text-slate-200 print:text-black">AgroGebeya — Digital Agricultural Marketplace:</strong>{' '}
+            <div className="space-y-2.5 text-xs sm:text-sm">
+              <div className="text-slate-200 font-normal">
+                <strong className="text-white print:text-black font-bold">AgroGebeya — Digital Agricultural Marketplace:</strong>{' '}
                 Built direct farmer-to-retailer commerce platform with real-time price tracking, inventory, and order APIs.
               </div>
-              <div>
-                <strong className="text-slate-200 print:text-black">Marketplace AI Agent:</strong>{' '}
+              <div className="text-slate-200 font-normal">
+                <strong className="text-white print:text-black font-bold">Marketplace AI Agent:</strong>{' '}
                 Engineered AI decision support assistant for product discovery, filtering, and comparative specs.
               </div>
-              <div>
-                <strong className="text-slate-200 print:text-black">E-commerce Platform:</strong>{' '}
+              <div className="text-slate-200 font-normal">
+                <strong className="text-white print:text-black font-bold">E-commerce Platform:</strong>{' '}
                 Designed backend microservices and database schemas for transactional e-commerce workflows.
               </div>
             </div>
           </div>
 
           {/* Section: Education & Certification */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs sm:text-sm">
             <div className="space-y-2">
               <h3 className="font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
                 Education
               </h3>
-              <div className="font-bold text-slate-100 print:text-black">
+              <div className="font-bold text-slate-100 text-sm sm:text-base print:text-black">
                 Bachelor of Science in Information Systems
               </div>
-              <div className="text-slate-400 print:text-gray-600 font-mono">
+              <div className="text-slate-300 print:text-gray-600 font-mono font-semibold">
                 Bahir Dar University (2023–2026)
               </div>
             </div>
@@ -202,11 +202,11 @@ export const ResumeSection: React.FC<ResumeSectionProps> = ({ isOpen, onClose })
               <h3 className="font-mono font-bold text-sky-400 print:text-sky-800 uppercase tracking-wider border-b border-slate-800 print:border-gray-300 pb-1">
                 Certification & Languages
               </h3>
-              <div>
-                <strong className="text-slate-200 print:text-black">Certification:</strong> CCNA: Introduction to Networks
+              <div className="text-slate-200 font-normal">
+                <strong className="text-white print:text-black font-bold">Certification:</strong> CCNA: Introduction to Networks
               </div>
-              <div>
-                <strong className="text-slate-200 print:text-black">Languages:</strong> English (Advanced), Amharic (Fluent), Gamogna (Fluent)
+              <div className="text-slate-200 font-normal">
+                <strong className="text-white print:text-black font-bold">Languages:</strong> English (Advanced), Amharic (Fluent), Gamogna (Fluent)
               </div>
             </div>
           </div>

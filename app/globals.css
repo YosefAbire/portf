@@ -2,18 +2,80 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-:root {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 7.5%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 7.5%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 199 89% 48%;
-  --primary-foreground: 210 40% 98%;
-  --accent-cyan: 188 94% 43%;
-  --accent-emerald: 160 84% 39%;
-  --border: 217.2 32.6% 17.5%;
+/* Theme Design System Variables */
+:root, [data-theme='ocean'] {
+  --bg-main: #0A0E17;
+  --bg-secondary: #0F172A;
+  --bg-card: rgba(17, 24, 39, 0.85);
+  --border-card: rgba(56, 189, 248, 0.25);
+  --border-subtle: rgba(51, 65, 85, 0.8);
+  --border-hover: rgba(56, 189, 248, 0.6);
+  --text-heading: #F9FAFB;
+  --text-body: #E2E8F0;
+  --text-muted: #94A3B8;
+  --accent-primary: #0EA5E9;
+  --accent-secondary: #6366F1;
+  --accent-glow: rgba(14, 165, 233, 0.2);
+}
+
+[data-theme='emerald'] {
+  --bg-main: #051813;
+  --bg-secondary: #0A261E;
+  --bg-card: rgba(12, 38, 30, 0.9);
+  --border-card: rgba(52, 211, 153, 0.3);
+  --border-subtle: rgba(20, 83, 65, 0.8);
+  --border-hover: rgba(52, 211, 153, 0.7);
+  --text-heading: #F0FDF4;
+  --text-body: #DCFCE7;
+  --text-muted: #86EFAC;
+  --accent-primary: #10B981;
+  --accent-secondary: #06B6D4;
+  --accent-glow: rgba(16, 185, 129, 0.25);
+}
+
+[data-theme='indigo'] {
+  --bg-main: #0E0C1D;
+  --bg-secondary: #17132F;
+  --bg-card: rgba(24, 19, 43, 0.9);
+  --border-card: rgba(167, 139, 250, 0.3);
+  --border-subtle: rgba(67, 56, 120, 0.8);
+  --border-hover: rgba(167, 139, 250, 0.7);
+  --text-heading: #FAF5FF;
+  --text-body: #F3E8FF;
+  --text-muted: #D8B4FE;
+  --accent-primary: #8B5CF6;
+  --accent-secondary: #3B82F6;
+  --accent-glow: rgba(139, 92, 246, 0.25);
+}
+
+[data-theme='amber'] {
+  --bg-main: #180D08;
+  --bg-secondary: #26160F;
+  --bg-card: rgba(38, 22, 15, 0.9);
+  --border-card: rgba(251, 191, 36, 0.3);
+  --border-subtle: rgba(120, 53, 15, 0.8);
+  --border-hover: rgba(251, 191, 36, 0.7);
+  --text-heading: #FFFBEB;
+  --text-body: #FEF3C7;
+  --text-muted: #FDE68A;
+  --accent-primary: #F59E0B;
+  --accent-secondary: #F97316;
+  --accent-glow: rgba(245, 158, 11, 0.25);
+}
+
+[data-theme='light'] {
+  --bg-main: #F8FAFC;
+  --bg-secondary: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --border-card: rgba(203, 213, 225, 0.9);
+  --border-subtle: rgba(226, 232, 240, 1);
+  --border-hover: rgba(2, 132, 199, 0.7);
+  --text-heading: #0F172A;
+  --text-body: #1E293B;
+  --text-muted: #475569;
+  --accent-primary: #0284C7;
+  --accent-secondary: #4F46E5;
+  --accent-glow: rgba(2, 132, 199, 0.15);
 }
 
 * {
@@ -21,43 +83,72 @@
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #0A0E17;
-  color: #F3F4F6;
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
-  selection-background-color: #0EA5E9;
-  selection-color: #ffffff;
+html {
+  font-size: 16px; /* High legibility base font size */
 }
 
-/* Custom Executive Glassmorphism */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-body);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism & High-Contrast Cards */
 .glass-panel {
-  background: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(55, 65, 81, 0.5);
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
 }
 
 .glass-panel-glow {
-  background: rgba(17, 24, 39, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(14, 165, 233, 0.25);
-  box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.1);
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-card);
+  box-shadow: 0 0 30px -5px var(--accent-glow);
 }
 
 .glass-card-hover {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .glass-card-hover:hover {
-  border-color: rgba(14, 165, 233, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.15);
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px -10px var(--accent-glow);
 }
 
-/* Executive Gradient Text */
+/* Executive Gradient Text Helpers */
 .gradient-text-sky {
   background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 50%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme='emerald'] .gradient-text-sky {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme='indigo'] .gradient-text-sky {
+  background: linear-gradient(135deg, #C084FC 0%, #8B5CF6 50%, #6D28D9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme='amber'] .gradient-text-sky {
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme='light'] .gradient-text-sky {
+  background: linear-gradient(135deg, #0284C7 0%, #2563EB 50%, #1D4ED8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -68,25 +159,24 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.gradient-text-silver {
-  background: linear-gradient(135deg, #F9FAFB 0%, #D1D5DB 60%, #9CA3AF 100%);
+[data-theme='light'] .gradient-text-emerald {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0E17;
+  background: var(--bg-main);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1F2937;
-  border-radius: 4px;
-  border: 1px solid #374151;
+  background: var(--border-subtle);
+  border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0EA5E9;
+  background: var(--accent-primary);
 }
