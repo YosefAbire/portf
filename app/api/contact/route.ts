@@ -150,14 +150,20 @@ export async function POST(request: Request) {
     const cleanMessage = sanitizeHtml(trimmedMessage);
 
     // 5. Initialize Resend SDK
-    const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey || apiKey.includes('your_resend_api_key')) {
+    let apiKey = (process.env.RESEND_API_KEY || '').trim();
+
+    // Auto-correct common copy-paste typo (e.g. 'rre_' -> 're_')
+    if (apiKey.startsWith('rre_')) {
+      apiKey = apiKey.substring(1);
+    }
+
+    if (!apiKey || !apiKey.startsWith('re_') || apiKey.includes('your_resend_api_key')) {
       console.warn(
-        '[Contact Route Warning] RESEND_API_KEY is not configured or using default placeholder in .env.local.'
+        '[Contact Route Warning] RESEND_API_KEY in .env.local is missing or invalid. Resend API keys must start with "re_".'
       );
     }
 
-    const resend = new Resend(apiKey || 're_placeholder_key');
+    const resend = new Resend(apiKey || 're_placeholder');
 
     // 6. Build Email Templates
     const emailSubject = `Portfolio Contact — ${cleanSubject}`;
@@ -231,8 +237,8 @@ ${trimmedMessage}
     `.trim();
 
     // 7. Send Transactional Email via Resend
-    const { error } = await resend.emails.send({
-      from: 'Yosef Portfolio <onboarding@resend.dev>',
+    const { data, error } = await resend.emails.send({
+      from: 'onboarding@resend.dev',
       to: [destinationEmail],
       replyTo: trimmedEmail,
       subject: emailSubject,
@@ -241,7 +247,7 @@ ${trimmedMessage}
     });
 
     if (error) {
-      console.error('[Resend Email Error]', error);
+      console.error('[Resend API Error Detail]:', JSON.stringify(error, null, 2));
       return NextResponse.json(
         {
           success: false,
